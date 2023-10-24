@@ -1,0 +1,59 @@
+@use "reset";
+
+body {
+  background-color: #fff;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Gothic Pro", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+  background-color: #da6b64;
+  padding: 11px 40px;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff; 
+  padding: 16px 0;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &_logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    img {
+      height: 44.65px;
+      width: 128px;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+  &_action {
+    margin: 0 0 0 auto;
+  }
+}
+
+main{
+ background-color: #fff;
+}
+
+footer {
+  background-color: #fff;
+}
