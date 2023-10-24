@@ -105,42 +105,107 @@ a {
 .button {
   cursor: pointer;
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   background-color: #da6b64;
   padding: 11px 40px;
   display: inline-block;
   border-radius: 25px;
   letter-spacing: 0.1em;
 }
+@media screen and (max-width: 1200px) {
+  .button {
+    font-size: 13px;
+  }
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .header {
   background-color: #fff;
   padding: 16px 0;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
 .header .container {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .header .container {
+    padding-right: 0;
+  }
+}
 .header_logo {
   display: flex;
   align-items: flex-end;
-  gap: 12px;
+  gap: 6px 12px;
+}
+@media screen and (max-width: 768px) {
+  .header_logo {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 .header_logo img {
   height: 44.65px;
   width: 128px;
 }
+@media screen and (max-width: 768px) {
+  .header_logo img {
+    height: 24px;
+  }
+}
 .header_logo p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
+}
+@media screen and (max-width: 1200px) {
+  .header_logo p {
+    font-size: 12px;
+  }
 }
 .header_action {
   margin: 0 0 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+.header_action .button img {
+  width: 28px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button img {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_action .button .pc {
+    display: none;
+  }
+}
+.header_action .button .sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header_action .button .sp {
+    display: block;
+  }
 }
 
 main {
@@ -154,6 +219,11 @@ main {
   background-color: #fff;
   padding: 80px 0;
 }
+@media screen and (max-width: 768px) {
+  .mainVisual {
+    padding: 40px 0;
+  }
+}
 .mainVisual .container {
   text-align: center;
   display: flex;
@@ -161,10 +231,15 @@ main {
   align-items: center;
 }
 .mainVisual .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.7em;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 1200px) {
+  .mainVisual .title {
+    font-size: 20px;
+  }
 }
 .mainVisual img {
   height: 80px;
@@ -172,10 +247,15 @@ main {
   margin: 20px 0;
 }
 .mainVisual .text {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.7em;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 1200px) {
+  .mainVisual .text {
+    font-size: 14px;
+  }
 }
 
 footer {
