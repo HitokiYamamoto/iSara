@@ -1,5 +1,6 @@
 @use "reset";
 @use "responsive" as *;
+@use "button" as *;
 
 body {
   background-color: #fff;
@@ -9,20 +10,6 @@ body {
 a {
   color: #000;
   text-decoration: none;
-}
-
-.button {
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  background-color: #da6b64;
-  padding: 11px 40px;
-  display: inline-block;
-  border-radius: 25px;
-  letter-spacing: 0.1em;
-  @include responsive(lg) {
-    font-size: 13px;
-  }
 }
 
 .container {
@@ -104,6 +91,9 @@ a {
 
 main{
  background-color: #fff;
+ > section {
+  padding: 40px 0;
+ }
 }
 
 .mainVisual {
@@ -145,10 +135,39 @@ main{
       font-size: 14px;
     }
   }
-  
-  
-  
 }
+
+
+.conversion {
+  background-color: #ebb94d;
+  color: #fff;
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+  }
+  &_copy {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+  &_attention {
+    padding: 0.2em;
+    font-size: 20px;
+    font-weight: 600;
+    color: #c7254e;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 16px 0 0;
+  }
+  .button-lg {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+  }
+}
+  
 
 footer {
   background-color: #fff;

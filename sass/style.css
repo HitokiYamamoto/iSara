@@ -79,6 +79,10 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 hr {
   display: block;
   height: 1px;
@@ -92,6 +96,31 @@ input, select {
   vertical-align: middle;
 }
 
+.button, .button-lg, .button-md {
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  background-color: #da6b64;
+  padding: 1em 1.5em;
+  display: inline-block;
+  border-radius: 25px;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 1200px) {
+  .button, .button-lg, .button-md {
+    font-size: 13px;
+  }
+}
+.button-md {
+  font-size: 20px;
+  font-weight: 600;
+}
+.button-lg {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 1.25em 1.5em;
+}
+
 body {
   background-color: #fff;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Gothic Pro", sans-serif;
@@ -100,22 +129,6 @@ body {
 a {
   color: #000;
   text-decoration: none;
-}
-
-.button {
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  background-color: #da6b64;
-  padding: 11px 40px;
-  display: inline-block;
-  border-radius: 25px;
-  letter-spacing: 0.1em;
-}
-@media screen and (max-width: 1200px) {
-  .button {
-    font-size: 13px;
-  }
 }
 
 .container {
@@ -211,6 +224,9 @@ a {
 main {
   background-color: #fff;
 }
+main > section {
+  padding: 40px 0;
+}
 
 .mainVisual {
   background-image: url(../images/main.jpg);
@@ -256,6 +272,36 @@ main {
   .mainVisual .text {
     font-size: 14px;
   }
+}
+
+.conversion {
+  background-color: #ebb94d;
+  color: #fff;
+}
+.conversion .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conversion_copy {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.conversion_attention {
+  padding: 0.2em;
+  font-size: 20px;
+  font-weight: 600;
+  color: #c7254e;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 16px 0 0;
+}
+.conversion .button-lg {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
 }
 
 footer {
