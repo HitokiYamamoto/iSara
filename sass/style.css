@@ -118,7 +118,25 @@ input, select {
 .button-lg {
   font-size: 24px;
   font-weight: 600;
+  line-height: 1.5;
   padding: 1.25em 1.5em;
+}
+@media screen and (max-width: 1200px) {
+  .button-lg {
+    font-size: 20px;
+  }
+}
+.button-lg br {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .button-lg br {
+    display: flex;
+  }
+}
+
+:root {
+  --color_secondary: #ebb94d;
 }
 
 body {
@@ -228,6 +246,36 @@ main > section {
   padding: 40px 0;
 }
 
+.section_title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  padding: 1em 0;
+  margin: 0 auto 1.5em;
+}
+.section_title::before, .section_title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section_title::before {
+  border-top: 4px solid var(--color_secondary);
+  border-left: 4px solid var(--color_secondary);
+}
+.section_title::after {
+  inset: auto 0 0 auto;
+  border-right: 4px solid var(--color_secondary);
+  border-bottom: 4px solid var(--color_secondary);
+}
+
 .mainVisual {
   background-image: url(../images/main.jpg);
   background-size: cover;
@@ -275,7 +323,7 @@ main > section {
 }
 
 .conversion {
-  background-color: #ebb94d;
+  background-color: var(--color_secondary);
   color: #fff;
 }
 .conversion .container {
@@ -299,9 +347,71 @@ main > section {
   margin: 16px 0 0;
 }
 .conversion .button-lg {
+  background-color: #d84940;
   width: 100%;
   max-width: 800px;
   margin: 20px 0;
+}
+.conversion_info {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 768px) {
+  .conversion_info {
+    font-size: 16px;
+  }
+}
+.conversion_info + .conversion_info {
+  margin: 20px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .conversion_info span {
+    display: block;
+    margin: 0.5em 0 0;
+  }
+}
+.conversion_sns {
+  margin: 24px 0 0;
+}
+
+.introduction {
+  background-image: url(../images/introduction.jpg);
+  padding-bottom: 160px;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.introduction .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduction p {
+  font-size: 18px;
+  line-height: 1.7;
+  z-index: 1;
+}
+.introduction p + p {
+  margin: 1.5em 0 0;
+}
+.introduction p strong {
+  font-weight: 600;
+  font-size: 1.1em;
+  display: inline-block;
+  position: relative;
+}
+.introduction p strong::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: var(--color_secondary);
+  position: absolute;
+  inset: auto auto 0 0;
+  top: 20px;
+  z-index: -1;
 }
 
 footer {
